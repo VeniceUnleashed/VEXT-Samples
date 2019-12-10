@@ -1,0 +1,10 @@
+{
+	"Name": "Battlefield V",
+	"Authors": [ "NoFaTe" ],
+	"Description": "Battle in the field V",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

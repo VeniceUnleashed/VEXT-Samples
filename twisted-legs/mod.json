@@ -1,0 +1,10 @@
+{
+	"Name": "Twisted Legs",
+	"Authors": [ "NoFaTe" ],
+	"Description": "Movement is reversed!",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

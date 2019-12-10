@@ -1,0 +1,10 @@
+{
+	"Name": "RCON",
+	"Authors": [ "NoFaTe" ],
+	"Description": "RCON command registration, handing, and sending demo.",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

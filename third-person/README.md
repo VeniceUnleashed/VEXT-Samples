@@ -16,8 +16,8 @@ If you want to use this camera in your mods simply copy the `camera.lua` script 
 | `void disable()` | Disables the third person camera. |
 | `bool isActive()` | Returns `true` if the camera is currently active, `false` otherwise. |
 | `bool isFreelooking()` | Returns `true` if the camera is currently in free-look mode, `false` otherwise. |
-| `InputDeviceKeys getFreelookKey()` | Gets the key the player needs to press to free-look. Defaults to `InputDeviceKeys.IDK_LeftAlt`. Can return `nil` if free-look is disabled. |
-| `void setFreelookKey(InputDeviceKeys key)` | Sets the key the player needs to press to free-look. You can pass `nil` to disable free-look. |
+| `InputDeviceKeys getFreelookKey()` | Gets the key the player needs to press to free-look. Defaults to `InputDeviceKeys.IDK_LeftAlt`. |
+| `void setFreelookKey(InputDeviceKeys key)` | Sets the key the player needs to press to free-look. You can use `InputDeviceKeys.IDK_None` to disable free-look. |
 | `float getDistance()` | Gets the maximum distance between the camera and the soldier. Defaults to `2.0` meters. |
 | `void setDistance(float distance)` | Sets the maximum distance between the camera and the soldier. |
 | `float getHeight()` | Gets the height of the camera target, relative to the soldier's feet. Defaults to `1.5` meters. |

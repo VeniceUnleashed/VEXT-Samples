@@ -108,7 +108,7 @@ function ThirdPersonCamera:_onInputPreUpdate(hook, cache, dt)
 	end
 
     -- Check if the player is locking the camera.
-    if self._freelookKey ~= nil and InputManager:IsKeyDown(self._freelookKey) then
+    if self._freelookKey ~= InputDeviceKeys.IDK_None and InputManager:IsKeyDown(self._freelookKey) then
         -- If we're not already locked then save the initial position.
         if not self._locked and player.input ~= nil then
 			self._locked = true

@@ -231,18 +231,20 @@ function ThirdPersonCamera:_onUpdate(delta, simDelta)
 	self._data.transform.forward = self._data.transform.forward * -1
 end
 
+-- Enables the third person camera.
 function ThirdPersonCamera:enable()
-	-- Create the camera and take control.
 	self:_createCamera()
 	self:_takeControl()
 end
 
+-- Disables the third person camera.
 function ThirdPersonCamera:disable()
-	-- Release control and destroy the camera.
 	self:_releaseControl()
 	self:_destroyCamera()
 end
 
+-- Gets the current transform of the third person camera.
+-- Will be `nil` if the camera is not active.
 function ThirdPersonCamera:getTransform()
 	if not self._active or self._data == nil then
 		return nil
@@ -252,34 +254,43 @@ function ThirdPersonCamera:getTransform()
 	return self._data.transform:Clone()
 end
 
+-- Returns `true` if the camera is currently in free-look mode, `false` otherwise.
 function ThirdPersonCamera:isFreelooking()
 	return self._locked
 end
 
+-- Returns `true` if the camera is currently active, `false` otherwise.
 function ThirdPersonCamera:isActive()
 	return self._active
 end
 
+-- Gets the key the player needs to press to free-look.
 function ThirdPersonCamera:getFreelookKey()
 	return self._freelookKey
 end
 
+-- Sets the key the player needs to press to free-look.
+-- You can use `InputDeviceKeys.IDK_None` to disable free-look.
 function ThirdPersonCamera:setFreelookKey(key)
 	self._freelookKey = key
 end
 
+-- Gets the maximum distance between the camera and the soldier.
 function ThirdPersonCamera:getDistance()
 	return self._distance
 end
 
+-- Sets the maximum distance between the camera and the soldier.
 function ThirdPersonCamera:setDistance(distance)
 	self._distance = distance
 end
 
+-- Gets the height of the camera target, relative to the soldier's feet.
 function ThirdPersonCamera:getHeight()
 	return self._height
 end
 
+-- Sets the height of the camera target, relative to the soldier's feet.
 function ThirdPersonCamera:setHeight(height)
 	self._height = height
 end

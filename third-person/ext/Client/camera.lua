@@ -35,31 +35,31 @@ function ThirdPersonCamera:__init()
 end
 
 function ThirdPersonCamera:_createCameraData()
-    if self._data ~= nil then
-        return
-    end
+	if self._data ~= nil then
+		return
+	end
 
 	-- Create data for our camera entity.
 	-- We set the priority very high so our game gets forced to use this camera.
-    self._data = CameraEntityData()
-    self._data.fov = 100
-    self._data.enabled = true
-    self._data.priority = 99999
-    self._data.nameId = 'third-person-cam'
-    self._data.transform = LinearTransform()
+	self._data = CameraEntityData()
+	self._data.fov = 100
+	self._data.enabled = true
+	self._data.priority = 99999
+	self._data.nameId = 'third-person-cam'
+	self._data.transform = LinearTransform()
 end
 
 function ThirdPersonCamera:_createCamera()
-    if self._entity ~= nil then
-        return
-    end
+	if self._entity ~= nil then
+		return
+	end
 
 	-- First ensure that we have create our camera data.
-    self:_createCameraData()
+	self:_createCameraData()
 
 	-- And then create the camera entity.
-    self._entity = EntityManager:CreateEntity(self._data, self._data.transform)
-    self._entity:Init(Realm.Realm_Client, true)
+	self._entity = EntityManager:CreateEntity(self._data, self._data.transform)
+	self._entity:Init(Realm.Realm_Client, true)
 end
 
 function ThirdPersonCamera:_onLevelDestroy()
@@ -69,20 +69,21 @@ function ThirdPersonCamera:_onLevelDestroy()
 end
 
 function ThirdPersonCamera:_destroyCamera()
-    if self._entity == nil then
-        return
-    end
+	if self._entity == nil then
+		return
+	end
 
 	-- Destroy the camera entity.
-    self._entity:Destroy()
-    self._entity = nil
+	self._entity:Destroy()
+	self._entity = nil
+	self._lookAtPos = nil
 end
 
 function ThirdPersonCamera:_takeControl()
 	-- By firing the "TakeControl" event on the camera entity we make the
 	-- current player switch to this camera from their first person camera.
-    self._active = true
-    self._entity:FireEvent('TakeControl')
+	self._active = true
+	self._entity:FireEvent('TakeControl')
 end
 
 function ThirdPersonCamera:_releaseControl()
@@ -96,9 +97,9 @@ function ThirdPersonCamera:_releaseControl()
 end
 
 function ThirdPersonCamera:_onInputPreUpdate(hook, cache, dt)
-    -- Don't do anything if the camera is not active.
-    if not self._active then
-        return
+	-- Don't do anything if the camera is not active.
+	if not self._active then
+		return
 	end
 
 	local player = PlayerManager:GetLocalPlayer()
@@ -107,19 +108,19 @@ function ThirdPersonCamera:_onInputPreUpdate(hook, cache, dt)
 		return
 	end
 
-    -- Check if the player is locking the camera.
-    if self._freelookKey ~= InputDeviceKeys.IDK_None and InputManager:IsKeyDown(self._freelookKey) then
-        -- If we're not already locked then save the initial position.
-        if not self._locked and player.input ~= nil then
+	-- Check if the player is locking the camera.
+	if self._freelookKey ~= InputDeviceKeys.IDK_None and InputManager:IsKeyDown(self._freelookKey) then
+		-- If we're not already locked then save the initial position.
+		if not self._locked and player.input ~= nil then
 			self._locked = true
 
-            self._lockedCameraYaw = player.input.authoritativeAimingYaw
-            self._lockedCameraPitch = player.input.authoritativeAimingPitch
-        end
+			self._lockedCameraYaw = player.input.authoritativeAimingYaw
+			self._lockedCameraPitch = player.input.authoritativeAimingPitch
+		end
 	elseif self._locked then
 		-- If we were previously locked then unlock.
-        self._locked = false
-    end
+		self._locked = false
+	end
 
 	-- If we are locking then prevent the player from looking around.
 	if self._locked then
@@ -167,14 +168,14 @@ end
 function ThirdPersonCamera:_onUpdate(delta, simDelta)
 	-- Don't update if the camera is not active.
 	if not self._active then
-        return
-    end
+		return
+	end
 
 	-- Don't update if we don't have a player with an alive soldier.
-    local player = PlayerManager:GetLocalPlayer()
+	local player = PlayerManager:GetLocalPlayer()
 
-    if player == nil or player.soldier == nil or player.input == nil then
-        return
+	if player == nil or player.soldier == nil or player.input == nil then
+		return
 	end
 
 	-- Get the soldier's aiming angles.

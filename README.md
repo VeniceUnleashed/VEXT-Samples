@@ -11,3 +11,4 @@ Sample VEXT mods for VU, some demonstrating various features and systems, and ot
 | [battlefieldv](battlefieldv) | The true Battlefield™ V experience. Truly cinematic visuals and more explosions than ever before. What else could you want? |
 | [no-parachute](no-parachute) | Disables the parachute. |
 | [twisted-legs](twisted-legs) | Reverses player movement. |
+| [third-person](third-person) | Third-person ray-traced player camera with free-look support. |

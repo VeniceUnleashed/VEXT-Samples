@@ -23,6 +23,7 @@ If you want to use this camera in your mods simply copy the `camera.lua` script 
 | `float getHeight()` | Gets the height of the camera target, relative to the soldier's feet. Defaults to `1.5` meters. |
 | `void setHeight(float height)` | Sets the height of the camera target, relative to the soldier's feet. |
 | `LinearTransform getTransform()` | Gets the current transform of the third person camera. Will be `nil` if the camera is not active. |
+| `Vec3 getLookAtPos()` | Gets the position of what the camera is currently looking at. Will be `nil` if the camera is not active. |
 
 Keep in mind that requiring the class from multiple scripts will still return the same instance. Also keep in mind that the camera will get automatically de-activated after level restarts or transitions.
 

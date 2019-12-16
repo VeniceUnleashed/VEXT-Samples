@@ -26,6 +26,7 @@ function ThirdPersonCamera:__init()
 	self._data = nil
 	self._entity = nil
 	self._active = false
+	self._lookAtPos = nil
 
 	-- Subscribe to relevant events and install necessary hooks.
 	Hooks:Install('Input:PreUpdate', 100, self, self._onInputPreUpdate)
@@ -193,8 +194,8 @@ function ThirdPersonCamera:_onUpdate(delta, simDelta)
 	pitch = pitch + math.pi / 2
 
 	-- Set the look at position above the soldier's feet.
-	local lookAtPos = player.soldier.transform.trans:Clone()
-	lookAtPos.y = lookAtPos.y + self._height
+	self._lookAtPos = player.soldier.transform.trans:Clone()
+	self._lookAtPos.y = self._lookAtPos.y + self._height
 
 	-- Calculate where our camera has to be base on the angles.
 	local cosfi = math.cos(yaw)
@@ -203,29 +204,29 @@ function ThirdPersonCamera:_onUpdate(delta, simDelta)
 	local costheta = math.cos(pitch)
 	local sintheta = math.sin(pitch)
 
-	local cx = lookAtPos.x + (self._distance * sintheta * cosfi)
-	local cy = lookAtPos.y + (self._distance * costheta)
-	local cz = lookAtPos.z + (self._distance * sintheta * sinfi)
+	local cx = self._lookAtPos.x + (self._distance * sintheta * cosfi)
+	local cy = self._lookAtPos.y + (self._distance * costheta)
+	local cz = self._lookAtPos.z + (self._distance * sintheta * sinfi)
 
 	local cameraLocation = Vec3(cx, cy, cz)
 
 	-- Raycast from the look at position backwards to the camera position
 	-- to find if there's anything that intersects.
-	local hit = RaycastManager:Raycast(lookAtPos, cameraLocation, RayCastFlags.DontCheckWater | RayCastFlags.DontCheckCharacter | RayCastFlags.DontCheckRagdoll)
+	local hit = RaycastManager:Raycast(self._lookAtPos, cameraLocation, RayCastFlags.DontCheckWater | RayCastFlags.DontCheckCharacter | RayCastFlags.DontCheckRagdoll)
 
 	-- If something does, then change the camera location to it.
 	if hit ~= nil then
 		cameraLocation = hit.position
 
 		-- Move it just a bit forward so we're not actually inside geometry.
-		local heading = lookAtPos - cameraLocation
+		local heading = self._lookAtPos - cameraLocation
 		local direction = heading:Normalize()
 
 		cameraLocation = cameraLocation + (direction * 0.1)
 	end
 
-    -- Calculate the LookAt transform.
-	self._data.transform:LookAtTransform(cameraLocation, lookAtPos)
+	-- Calculate the LookAt transform.
+	self._data.transform:LookAtTransform(cameraLocation, self._lookAtPos)
 
 	-- Flip the camera angles so we're looking at the player.
 	self._data.transform.left = self._data.transform.left * -1
@@ -294,6 +295,12 @@ end
 -- Sets the height of the camera target, relative to the soldier's feet.
 function ThirdPersonCamera:setHeight(height)
 	self._height = height
+end
+
+-- Gets the position of what the camera is currently looking at.
+-- Will be `nil` if the camera is not active.
+function ThirdPersonCamera:getLookAtPos()
+	return self._lookAtPos
 end
 
 -- Singleton.

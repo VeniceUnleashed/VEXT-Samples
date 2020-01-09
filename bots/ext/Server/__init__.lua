@@ -1,5 +1,7 @@
 local Bots = require('bots')
 
+-- These NetEvents are triggered by client-side console commands.
+-- Refer to the client __init__.lua script for more information.
 NetEvents:Subscribe('Bots:Spawn', function(player, name, teamId, squadId, trans)
 	local existingPlayer = PlayerManager:GetPlayerByName(name)
 	local bot = nil

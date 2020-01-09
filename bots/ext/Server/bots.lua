@@ -39,6 +39,8 @@ function Bots:createBot(name, team, squad)
 	botPlayer.input = botInput
 
 	-- Add to our local storage.
+	-- We need to keep the EntryInput instances around separately because if we don't
+	-- they'll get garbage-collected and destroyed and that will cause our game to crash.
 	table.insert(self._bots, botPlayer)
 	self._botInputs[botPlayer.id] = botInput
 

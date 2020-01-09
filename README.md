@@ -12,3 +12,4 @@ Sample VEXT mods for VU, some demonstrating various features and systems, and ot
 | [no-parachute](no-parachute) | Disables the parachute. |
 | [twisted-legs](twisted-legs) | Reverses player movement. |
 | [third-person](third-person) | Third-person ray-traced player camera with free-look support. |
+| [bots](bots) | Dumb AI bots and a re-usable bot manager for your own mods. |

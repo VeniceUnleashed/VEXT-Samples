@@ -1,0 +1,10 @@
+{
+	"Name": "Bots",
+	"Authors": [ "NoFaTe" ],
+	"Description": "Dumb AI bots.",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

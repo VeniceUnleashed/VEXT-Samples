@@ -58,10 +58,49 @@ NetEvents:Subscribe('Bots:KickAll', function(player)
 	Bots:destroyAllBots()
 end)
 
--- Listen for bot update events and update their input so that
--- they always turn around in circles. You can make them do anything
--- else you want here, from shooting to jumping, etc.
+-- We maintain some timers here that we use to have our bots move smoothly.
+local elapsedPitchTime = 0
+local elapsedYawTime = 0
+
+Events:Subscribe('Engine:Update', function(dt)
+	-- We keep track of pitch and yaw time separately here because we want
+	-- the bots to turn and look at different rates.
+	elapsedPitchTime = elapsedPitchTime + dt
+
+	while elapsedPitchTime >= 0.7 do
+		elapsedPitchTime = elapsedPitchTime - 0.7
+	end
+
+	elapsedYawTime = elapsedYawTime + dt
+
+	while elapsedYawTime >= 1.5 do
+		elapsedYawTime = elapsedYawTime - 1.5
+	end
+end)
+
+-- Listen for bot update events and update their input to make them move.
+-- You can make them do anything else you want here, from shooting to
+-- aiming, and proning, etc.
 Events:Subscribe('Bot:Update', function(bot, dt)
-    bot.input:SetLevel(EntryInputActionEnum.EIAThrottle, 1.0)
-    bot.input:SetLevel(EntryInputActionEnum.EIAYaw, 0.75)
+	-- Make the bots move forward.
+    bot.input:SetLevel(EntryInputActionEnum.EIAThrottle, 0.5)
+
+	-- Have bots jump with a 1.5% chance per frame.
+	local shouldJump = MathUtils:GetRandomInt(0, 1000)
+
+	if shouldJump <= 15 then
+		bot.input:SetLevel(EntryInputActionEnum.EIAJump, 1.0)
+	else
+		bot.input:SetLevel(EntryInputActionEnum.EIAJump, 0.0)
+	end
+
+	-- We also take control over their aiming and make them look up and down
+	-- and go around in circles.
+	bot.input.flags = EntryInputFlag.AuthoritativeAiming
+
+	local pitch = (((elapsedPitchTime / 0.7) - 1.0) * math.pi) + 0.5
+	local yaw = ((elapsedYawTime / 1.5) * math.pi * 2.0)
+
+	bot.input.authoritativeAimingPitch = pitch
+	bot.input.authoritativeAimingYaw = yaw
 end)

@@ -1,0 +1,10 @@
+{
+	"Name": "Custom soldier",
+	"Authors": [ "NoFaTe" ],
+	"Description": "Creating a custom soldier blueprint with custom soldier data.",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

@@ -14,3 +14,4 @@ Sample VEXT mods for VU, some demonstrating various features and systems, and ot
 | [third-person](third-person) | Third-person ray-traced player camera with free-look support. |
 | [bots](bots) | Dumb AI bots and a re-usable bot manager for your own mods. |
 | [custom-soldier](customs-soldier) | Demonstrates creating a custom soldier blueprint with custom soldier data. |
+| [nohavok](nohavok) | Replaces static model groups with individual entities for easier manipulation. |

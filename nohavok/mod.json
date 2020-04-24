@@ -1,0 +1,10 @@
+{
+	"Name": "nohavok",
+	"Authors": [ "NoFaTe", "Powback" ],
+	"Description": "Replaces static model groups with individual entities for easier manipulation.",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

@@ -18,7 +18,6 @@ This mod doesn't currently work on some maps:
 | Operation 925 (XP2_Office) | Server crash |
 
 Other issues:
-- The client or server will sometimes crash when switching levels.
 - When setting an entity scale higher than `1.0`, the server crashes.
 - In some maps, it creates invisible collision boxes (might be related to scale).
 - On high-latency connections, the client will fail to receive the relevant data and get kicked after loading the level because of data mismatch.

@@ -52,13 +52,13 @@ Events:Subscribe('Extension:Loaded', function()
 	veState.dof = dof
 	veState.vignette = vignette
 	veState.filmGrain = filmGrain
-	
+
 	-- Add state to VE manager.
 	VisualEnvironmentManager:AddState(veState)
 end)
 
 -- Add the VE state as soon as the level has loaded.
-Events:Subscribe('Client:LevelLoaded', function()
+Events:Subscribe('Level:Loaded', function()
 	VisualEnvironmentManager:AddState(veState)
 end)
 

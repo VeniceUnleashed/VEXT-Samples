@@ -80,7 +80,7 @@ Events:Subscribe('Level:RegisterEntityResources', function()
 
 	-- Locate the custom soldier BP, get its data, and add to the registry container.
 	-- You can fetch the BP in the same way when you want to spawn a player with it.
-	local customSoldierBp = SoldierBlueprint(ResourceManager:SearchForInstanceByGUID(customSoldierGuid))
+	local customSoldierBp = SoldierBlueprint(ResourceManager:SearchForInstanceByGuid(customSoldierGuid))
 	local soldierData = customSoldierBp.object
 
 	registry.blueprintRegistry:add(customSoldierBp)

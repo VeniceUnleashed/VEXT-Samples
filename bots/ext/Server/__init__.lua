@@ -25,8 +25,8 @@ NetEvents:Subscribe('Bots:Spawn', function(player, name, teamId, squadId, trans)
 	end
 
 	-- Get the default MpSoldier blueprint and the US assault kit.
-	local soldierBlueprint = ResourceManager:SearchForInstanceByGUID(Guid('261E43BF-259B-41D2-BF3B-9AE4DDA96AD2'))
-	local soldierKit = ResourceManager:SearchForInstanceByGUID(Guid('A15EE431-88B8-4B35-B69A-985CEA934855'))
+	local soldierBlueprint = ResourceManager:SearchForInstanceByGuid(Guid('261E43BF-259B-41D2-BF3B-9AE4DDA96AD2'))
+	local soldierKit = ResourceManager:SearchForInstanceByGuid(Guid('A15EE431-88B8-4B35-B69A-985CEA934855'))
 
 	-- Create the transform of where to spawn the bot at.
 	local transform = LinearTransform()

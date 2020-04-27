@@ -14,7 +14,7 @@ local function getExplosionEntityData()
 
 	-- First, find the explosion we're basing this on.
 	-- This is the Weapons/Gadgets/M224/M224_Projectile explosion effect.
-	local original = ResourceManager:SearchForInstanceByGUID(Guid('4827959A-8A3B-4C9F-994E-E54150AA565F'))
+	local original = ResourceManager:SearchForInstanceByGuid(Guid('4827959A-8A3B-4C9F-994E-E54150AA565F'))
 
 	if original == nil then
 		print('Could not find explosion template')

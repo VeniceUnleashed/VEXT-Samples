@@ -96,7 +96,7 @@ Events:Subscribe('Bot:Update', function(bot, dt)
 
 	-- We also take control over their aiming and make them look up and down
 	-- and go around in circles.
-	bot.input.flags = EntryInputFlag.AuthoritativeAiming
+	bot.input.flags = EntryInputFlags.AuthoritativeAiming
 
 	local pitch = (((elapsedPitchTime / 0.7) - 1.0) * math.pi) + 0.5
 	local yaw = ((elapsedYawTime / 1.5) * math.pi * 2.0)

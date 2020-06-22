@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body, html {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			overflow: hidden;
+		}
+
+		#mock-view {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('img/view.jpg');
+			background-size: 100% 100%;
+			display: none;
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(1.0);
+				opacity: 0.5;
+			}
+
+			50% {
+				transform: scale(1.03);
+				opacity: 0.8;
+			}
+
+			100% {
+				transform: scale(1.0);
+				opacity: 0.5;
+			}
+		}
+
+		@keyframes veins {
+			0% {
+				transform: scale(1.0);
+				opacity: 0.2;
+			}
+
+			50% {
+				transform: scale(1.015);
+				opacity: 0.7;
+			}
+
+			100% {
+				transform: scale(1.0);
+				opacity: 0.2;
+			}
+		}
+
+		#bloody-screen {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('img/bloody_screen_so_real.png');
+			background-size: 100% 100%;
+			opacity: 0.8;
+			animation-name: pulse;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			display: none;
+		}
+
+		#veins {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('img/veins-transparent.png');
+			background-size: 100% 100%;
+			opacity: 0.8;
+			animation-name: veins;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="mock-view"></div>
+	<div id="bloody-screen"></div>
+	<div id="veins"></div>
+
+	<script type="application/javascript">
+		const mockView = document.getElementById('mock-view');
+		const bloodyScreen = document.getElementById('bloody-screen');
+		const veins = document.getElementById('veins');
+
+		/*if (!window.WebUI) {
+			mockView.style.display = 'block';
+		}*/
+
+		window.showInfectedOverlay = () => {
+			bloodyScreen.style.display = 'block';
+			veins.style.display = 'block';
+		};
+
+		window.hideInfectedOverlay = () => {
+			bloodyScreen.style.display = 'none';
+			veins.style.display = 'none';
+		};
+	</script>
+</body>
+</html>

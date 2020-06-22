@@ -1,0 +1,11 @@
+{
+	"Name": "Infection",
+	"Authors": [ "NoFaTe" ],
+	"Description": "Zombies 'n Stuff",
+	"Version": "0.0.1-alpha",
+	"HasWebUI": true,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

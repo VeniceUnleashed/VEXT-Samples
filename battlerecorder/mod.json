@@ -1,0 +1,10 @@
+{
+	"Name": "Battlerecorder",
+	"Authors": [ "NoFaTe" ],
+	"Description": "Record your battles",
+	"Version": "0.0.1-alpha",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

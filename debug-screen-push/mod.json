@@ -1,0 +1,9 @@
+{
+	"Name": "DebugScreenPush",
+	"Authors": ["Powback"],
+	"Description": "Shows what screens are pushed",
+	"URL": "",
+	"Version": "1.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

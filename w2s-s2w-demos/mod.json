@@ -1,0 +1,12 @@
+{
+	"Name": "W2S-S2W-Demos",
+	"Authors": ["FoolHen"],
+	"Description": "Demo on how to use world to screen",
+	"URL": "veniceunleashed.net",
+	"Version": "1.0.0",
+	"HasWebUI": true,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

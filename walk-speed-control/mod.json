@@ -1,0 +1,12 @@
+{
+	"Name": "WalkSpeedControl",
+	"Authors": ["FoolHen"],
+	"Description": "Lets you control walk speed with the mouse wheel",
+	"URL": "veniceunleashed.net",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

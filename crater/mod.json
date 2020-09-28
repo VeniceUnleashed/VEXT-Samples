@@ -1,0 +1,9 @@
+{
+	"Name": "CraterDepth",
+	"Authors": ["Powback"],
+	"Description": "Makes craters bigger",
+	"URL": "",
+	"Version": "1.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

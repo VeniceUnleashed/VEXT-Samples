@@ -1,0 +1,12 @@
+{
+	"Name": "NoRecoilNoSpread",
+	"Authors": ["FoolHen"],
+	"Description": "Removes M4A1 recoil and spread",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

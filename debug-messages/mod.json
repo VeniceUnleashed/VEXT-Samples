@@ -1,0 +1,9 @@
+{
+	"Name": "DebugMessages",
+	"Authors": ["Powback"],
+	"Description": "Shows all messages FB dispatches",
+	"URL": "",
+	"Version": "1.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

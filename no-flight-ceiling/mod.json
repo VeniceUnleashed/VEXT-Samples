@@ -1,0 +1,9 @@
+{
+	"Name": "NoFlightCeiling",
+	"Authors": ["Powback"],
+	"Description": "Disables the flight ceiling",
+	"URL": "",
+	"Version": "1.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

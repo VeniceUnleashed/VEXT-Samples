@@ -1,0 +1,12 @@
+{
+	"Name": "SprintingStamina",
+	"Authors": ["FoolHen"],
+	"Description": "Adds stamina, making you unable to sprint for a while",
+	"URL": "veniceunleashed.net",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

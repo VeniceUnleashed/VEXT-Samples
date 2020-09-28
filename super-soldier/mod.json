@@ -1,0 +1,9 @@
+{
+	"Name": "SuperSoldier",
+	"Authors": ["Powback"],
+	"Description": "Run faster! Jump higher!",
+	"URL": "",
+	"Version": "1.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

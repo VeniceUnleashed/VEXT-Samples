@@ -1,0 +1,9 @@
+{
+	"Name": "DrivableAC",
+	"Authors": ["Powback"],
+	"Description": "Makes the AC130 drivable",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

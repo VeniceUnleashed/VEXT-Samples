@@ -1,0 +1,12 @@
+{
+	"Name": "NoHeadglitchRaycast",
+	"Authors": [ "FoolHen" ],
+	"Description": "Simple raycast demo that lowers your gun when its close to a object",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

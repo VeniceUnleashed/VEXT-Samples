@@ -1,0 +1,9 @@
+{
+	"Name": "InfiniteVehicles",
+	"Authors": ["Powback"],
+	"Description": "Removes the vehicle count limitation, making vehicles spawn as soon as the spot is available.",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

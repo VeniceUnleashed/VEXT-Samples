@@ -1,0 +1,9 @@
+{
+	"Name": "NoInvisibleCollision",
+	"Authors": ["Powback"],
+	"Description": "Removes invisible collision",
+	"URL": "",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}

@@ -1,0 +1,12 @@
+{
+	"Name": "UIDisablingDemo",
+	"Authors": ["FoolHen"],
+	"Description": "Demo on how to disable parts of the vanilla UI, specifically 'Waiting for players' message and crosshair",
+	"URL": "veniceunleashed.net",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}

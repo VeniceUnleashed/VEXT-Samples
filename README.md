@@ -38,3 +38,21 @@ Sample VEXT mods for VU, some demonstrating various features and systems, and ot
 | [ui-disabling](ui-disabling) | Demo on how to disable parts of the vanilla UI. |
 | [w2s-s2w-demos](w2s-s2w-demos) | World-to-Screen and Screen-to-World demos. |
 | [walk-speed-control](walk-speed-control) | Allows controlling the walking speed using the mousewheel. |
+
+## Other mod repositories
+
+Here are some other repositories that contain VU mods that you could use for reference:
+
+| Repository | Description |
+| ---------- | ----------- |
+| [BF3RM/MapEditor](https://github.com/BF3RM/MapEditor) | The VU in-game collaborative map editor. |
+| [EmulatorNexus/VU-Mods](https://github.com/EmulatorNexus/VU-Mods) | A collection of a ton of small mods, many of which are outdated and may no longer work. |
+| [EmulatorNexus/VU-Spec](https://github.com/EmulatorNexus/VU-Spec) | The official VU spectator mod. |
+| [FoolHen/BoxGame](https://github.com/FoolHen/BoxGame) | A last-man-standing minigame. |
+| [FoolHen/MedicRadar](https://github.com/FoolHen/MedicRadar) | Adds a HUD element which shows nearby medics while dead. |
+| [J4nssent/VU-Mods](https://github.com/J4nssent/VU-Mods) | A few different fun mods, mostly related to modifying and creating new vehicles. |
+| [kiwidoggie/kAdmin](https://github.com/kiwidoggie/kAdmin) | A simple mod which adds in-game kicking and banning commands. |
+| [OrfeasZ/battlerecorder](https://github.com/OrfeasZ/battlerecorder) | A gameplay recording and replay mod, similar to the original BattleRecorder. |
+| [OrfeasZ/infection](https://github.com/OrfeasZ/infection) | The classic infection zombie mod re-created for VU. |
+| [OrfeasZ/prop-hunt](https://github.com/OrfeasZ/prop-hunt) | The classic hide-and-seek prop hunt mod re-created for VU. |
+| [txt231/VEXT-Jetpack](https://github.com/txt231/VEXT-Jetpack) | Gives all players a jetpack, with the ability to fly around the map. |

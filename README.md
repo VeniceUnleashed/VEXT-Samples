@@ -21,6 +21,7 @@ Sample VEXT mods for VU, some demonstrating various features and systems, and ot
 | [first-person-death](first-person-death) | Keeps the death camera in first person to where your soldiers' eyes are. |
 | [gravity](gravity) | Modifies the gravity of a soldier and their jump height. |
 | [infinite-vehicles](infinite-vehicles) | Prevents vehicles from exploding after being abandonded and allows them to respawn even while in-use. |
+| [ingame-spec](ingame-spec) | A mod which allows you to spectate other players while in-game. |
 | [input-restriction](input-restriction) | Demonstrate how to disable player inputs (eg. prevent a player from jumping). |
 | [netevents](netevents) | Demonstrates VeniceEXT NetEvents which allow for communication between the server and the clients. |
 | [no-flight-ceiling](no-flight-ceiling) | Removes the flight ceiling. |
@@ -53,6 +54,6 @@ Here are some other repositories that contain VU mods that you could use for ref
 | [J4nssent/VU-Mods](https://github.com/J4nssent/VU-Mods) | A few different fun mods, mostly related to modifying and creating new vehicles. |
 | [kiwidoggie/kAdmin](https://github.com/kiwidoggie/kAdmin) | A simple mod which adds in-game kicking and banning commands. |
 | [OrfeasZ/battlerecorder](https://github.com/OrfeasZ/battlerecorder) | A gameplay recording and replay mod, similar to the original BattleRecorder. |
-| [OrfeasZ/infection](https://github.com/OrfeasZ/infection) | The classic infection zombie mod re-created for VU. |
+| [OrfeasZ/infection](https://github.com/OrfeasZ/infection) | The classic zombie infection mod re-created for VU. |
 | [OrfeasZ/prop-hunt](https://github.com/OrfeasZ/prop-hunt) | The classic hide-and-seek prop hunt mod re-created for VU. |
 | [txt231/VEXT-Jetpack](https://github.com/txt231/VEXT-Jetpack) | Gives all players a jetpack, with the ability to fly around the map. |

@@ -2,7 +2,6 @@
 	"Name": "InputRestrictionMod",
 	"Authors": ["Platy"],
 	"Description": "A small example of ways to restrict the player's input.",
-	"URL": "",
 	"Version": "1.0.0",
 	"HasVeniceEXT": true,
 	"Dependencies": {

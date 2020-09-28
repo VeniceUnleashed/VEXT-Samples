@@ -2,8 +2,9 @@
 	"Name": "NetEvents",
 	"Authors": ["Omarito"],
 	"Description": "Demo for NetEevents",
-	"URL": "none",
-	"Version": "0",
-	"HasWebUI": false,
-	"HasVeniceEXT": true
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
 }

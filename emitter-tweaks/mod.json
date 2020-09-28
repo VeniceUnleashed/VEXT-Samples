@@ -2,8 +2,9 @@
 	"Name": "EmitterTweaks",
 	"Authors": ["Powback"],
 	"Description": "Modifies smoke to last longer and certain stuff light up",
-	"URL": "",
-	"Version": "1.0",
-	"HasWebUI": false,
-	"HasVeniceEXT": true
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
 }

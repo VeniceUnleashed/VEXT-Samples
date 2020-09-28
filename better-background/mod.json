@@ -2,8 +2,9 @@
 	"Name": "BetterBackground",
 	"Authors": [ "Powback" ],
 	"Description": "Removes the blue tint from the UI and improves the OutOfBounds post processing",
-	"URL": "",
-	"Version": "1",
-	"HasWebUI": false,
-	"HasVeniceEXT": true
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
 }

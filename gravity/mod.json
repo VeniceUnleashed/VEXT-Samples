@@ -2,7 +2,6 @@
 	"Name": "GravityMod",
 	"Authors": ["Platy"],
 	"Description": "A basic example of modifying gravity as well as the players' jump height to better illustrate the difference.",
-	"URL": "",
 	"Version": "1.0.0",
 	"HasVeniceEXT": true,
 	"Dependencies": {

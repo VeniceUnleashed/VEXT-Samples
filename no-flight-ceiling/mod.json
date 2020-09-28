@@ -2,8 +2,9 @@
 	"Name": "NoFlightCeiling",
 	"Authors": ["Powback"],
 	"Description": "Disables the flight ceiling",
-	"URL": "",
-	"Version": "1.0",
-	"HasWebUI": false,
-	"HasVeniceEXT": true
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
 }

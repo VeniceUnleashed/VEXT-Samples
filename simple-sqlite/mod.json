@@ -1,0 +1,10 @@
+{
+	"Name": "simple-sqlite",
+	"Authors": [ "snaiperskaya" ],
+	"Description": "This simple mod demostrates how to interact with VEXT's integrated SQLite db.",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}
